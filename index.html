@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/band/logo.png"/>
 </head>
 <body>
     <div id="main">
@@ -42,7 +43,7 @@
         </div>
 
         <div id="content">
-            <!-- about section -->
+            <!--begin about section -->
             <div class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
@@ -59,25 +60,24 @@
                     commodo consequat.
                 </p>
 
-                <div class="members-list">
-                    <div class="member-item">
+                <div class="members-list row">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/images/band/member1.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/images/band/member1.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/images/band/member1.jpg" alt="" class="member-img">
                     </div>
-
-                    <div class="clear"></div>
                 </div>
             </div>
+            <!--end about section -->
 
-            <!-- tour section -->
+            <!-- begin tour section -->
             <div class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
@@ -91,65 +91,157 @@
                     </ul>
 
                     <!-- plates -->
-                    <div class="plates-list">
-                        <div class="plate-item">
+                    <div class="plates-list row">
+                        <div class="col-third col">
                             <img src="./assets/images/plates/newyork.jpg" alt="NewYork" class="plate-img">
                             <div class="plate-body">
                                 <h3 class="plate-heading">New York</h3>
                                 <p class="plate-time">Fri 27 Nov 2016</p>
                                 <p class="plate-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="plate-buy-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="plate-item">
+                        <div class="col-third col">
                             <img src="./assets/images/plates/paris.jpg" alt="Paris" class="plate-img">
                             <div class="plate-body">
                                 <h3 class="plate-heading">Paris</h3>
                                 <p class="plate-time">Sat 28 Nov 2016</p>
                                 <p class="plate-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="plate-buy-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="plate-item">
+                        <div class="col-third col">
                             <img src="./assets/images/plates/sanfancisco.jpg" alt="sanfancisco" class="plate-img">
                             <div class="plate-body">
                                 <h3 class="plate-heading">San Francisco</h3>
                                 <p class="plate-time">Sun 29 Nov 2016</p>
                                 <p class="plate-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="plate-buy-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-
-                        <div class="clear"></div>
                     </div>
                 </div>
+            </div>
+            <!-- end tour section -->
+
+            <!-- begin modal -->
+            <div class="modal js-modal">
+                <div class="modal-container js-modal-container">
+                    <div class="modal-close js-modal-close">
+                        <i class="ti-close"></i>
+                    </div>
+
+                    <header class="modal-header">
+                        <i class="ti-bag"></i>
+                        Tickets
+                    </header>
+
+                    <div class="modal-body">
+                        <label for="tickets-quantity" class="modal-label">
+                            <i class="ti-shopping-cart"></i>
+                            Tickets, $15 per person
+                        </label>
+                        <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                        <label for="tickets-email" class="modal-label">
+                            <i class="ti-user"></i>
+                            Send To
+                        </label>
+                        <input id="tickets-email" type="email" class="modal-input" placeholder="How many?">
+
+                        <button id="buy-tickets">
+                            PAY <i class="ti-check"></i>
+                        </button>
+                    </div>
+
+                    <footer class="modal-footer">
+                        <p class="modal-help">Need <a href="">help?</a></p>
+                    </footer>
                 </div>
             </div>
+            <!-- end modal -->
 
-            <!-- contact section -->
+            <!-- begin contact section -->
             <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
-                <div class="address-band">
-                    <ul class="address-text">
-                        <li>Chicago, US</li>
-                        <li>Phone: +00 151515</li>
-                        <li>Email: mail@mail.com</li>
-                    </ul>
-                </div>
-
-                <div class="send-mail">
-                    <input class="input-text" type="text" name=""></input>
-                    <input class="input-text" type="text" name=""></input>
-                    <input class="input-text" type="text" name=""></input>
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" id="" placeholder="Name" required class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="" id="" placeholder="Email" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" id="" placeholder="Message" required class="form-control">
+                                </div>
+                            </div>
+                            <input class="btn mt-16 pull-right" type="submit" value="SEND">
+                        </form>
+                    </div>
                 </div>
             </div>
+            <!-- end contact section -->
+
+            <!-- begin map section -->
+            <div class="map-section">
+                <img src="./assets/images/map.jpg" alt="map">
+            </div>
+            <!-- end map section -->
+
         </div>
 
+        <!-- begin footer -->
         <div id="footer">
-
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
         </div>
+        <!-- end footer -->
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function showBuyTicketsModal() {
+            modal.classList.add('open')
+        }
+
+        function hideBuyTicketsModal() {
+            modal.classList.remove('open')
+        }
+
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTicketsModal)
+        }
+
+        modalClose.addEventListener('click', hideBuyTicketsModal)
+        modal.addEventListener('click', hideBuyTicketsModal)
+
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation()
+        })
+    </script>
+
 </body>
 </html>
